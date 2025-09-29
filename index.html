@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete HTML Elements Reference</title>
+  
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Menu Toggle Button -->
+  <button class="menu-toggle" onclick="toggleNav()">☰</button>
+  
+  <!-- Dark Mode Toggle Button -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</button>
+  
+  <!-- Overlay for sidebar -->
+  <div class="overlay" onclick="toggleNav()"></div>
+  
+  <!-- Navigation Menu - Allows jumping to different sections -->
+  <div class="nav-container" id="navContainer">
+    <div class="nav-links">
+      <a href="#structure" class="nav-link" onclick="closeNav()">Document Structure</a>
+      <a href="#sectioning" class="nav-link" onclick="closeNav()">Sectioning</a>
+      <a href="#text" class="nav-link" onclick="closeNav()">Text Elements</a>
+      <a href="#lists-tables" class="nav-link" onclick="closeNav()">Lists & Tables</a>
+      <a href="#forms" class="nav-link" onclick="closeNav()">Forms</a>
+      <a href="#media" class="nav-link" onclick="closeNav()">Media</a>
+      <a href="#semantic" class="nav-link" onclick="closeNav()">Semantic</a>
+      <a href="#metadata" class="nav-link" onclick="closeNav()">Metadata</a>
+      <a href="#deprecated" class="nav-link" onclick="closeNav()">Deprecated</a>
+      <a href="#compiler" class="nav-link" onclick="closeNav()">HTML Compiler</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1>Complete HTML Elements Reference Guide</h1>
+    
+    <!-- SECTION 1: Document Structure & Metadata -->
+    <section id="structure" class="structure-element">
+      <h2>Document Structure & Metadata Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements form the basic structure of an HTML document and provide metadata about the page.</p>
+      </div>
+      
+      <!-- DOCTYPE Example -->
+      <div class="element-box">
+        <h2>&lt;!DOCTYPE&gt;</h2>
+        <p><strong>Description:</strong> Defines HTML5 document type so browsers know how to render the page.</p>
+        <p><strong>Example:</strong> <code>&lt;!DOCTYPE html&gt;</code> is written at the top of every HTML document.</p>
+      </div>
+
+      <!-- HTML Example -->
+      <div class="element-box">
+        <h2>&lt;html&gt;</h2>
+        <p><strong>Description:</strong> Root element that contains the whole HTML page.</p>
+        <p><strong>Example:</strong> This entire document is wrapped inside <code>&lt;html&gt;</code>.</p>
+      </div>
+
+      <!-- HEAD Example -->
+      <div class="element-box">
+        <h2>&lt;head&gt;</h2>
+        <p><strong>Description:</strong> Holds metadata, links, title, and scripts for the page.</p>
+        <p><strong>Example:</strong> This demo's CSS and JavaScript are inside the <code>&lt;head&gt;</code>.</p>
+      </div>
+
+      <!-- TITLE Example -->
+      <div class="element-box">
+        <h2>&lt;title&gt;</h2>
+        <p><strong>Description:</strong> Sets the title of the page (shown in browser tab).</p>
+        <p><strong>Example:</strong> Current page title is "HTML Elements Demo".</p>
+      </div>
+
+      <!-- META Example -->
+      <div class="element-box">
+        <h2>&lt;meta&gt;</h2>
+        <p><strong>Description:</strong> Provides metadata like character encoding and viewport.</p>
+        <p><strong>Example:</strong> <code>&lt;meta charset="UTF-8"&gt;</code></p>
+      </div>
+
+      <!-- BASE Example -->
+      <div class="element-box">
+        <h2>&lt;base&gt;</h2>
+        <p><strong>Description:</strong> Defines a base URL for all relative links.</p>
+        <p><strong>Example:</strong> If you write <code>&lt;a href="page.html"&gt;</code>, it will point to <code>https://example.com/page.html</code>.</p>
+      </div>
+
+      <!-- LINK Example -->
+      <div class="element-box">
+        <h2>&lt;link&gt;</h2>
+        <p><strong>Description:</strong> Links external resources like CSS or icons.</p>
+        <p><strong>Example:</strong> <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></p>
+      </div>
+
+      <!-- STYLE Example -->
+      <div class="element-box">
+        <h2>&lt;style&gt;</h2>
+        <p><strong>Description:</strong> Lets you write internal CSS rules.</p>
+        <p><strong>Example:</strong> The white boxes on this page are styled using <code>&lt;style&gt;</code>.</p>
+      </div>
+
+      <!-- SCRIPT Example -->
+      <div class="element-box">
+        <h2>&lt;script&gt;</h2>
+        <p><strong>Description:</strong> Used to include JavaScript code or external JS files.</p>
+        <p><strong>Example:</strong> Open console to see message from <code>&lt;script&gt;</code>.</p>
+      </div>
+
+      <!-- NOSCRIPT Example -->
+      <div class="element-box">
+        <h2>&lt;noscript&gt;</h2>
+        <p><strong>Description:</strong> Provides fallback content if JavaScript is disabled.</p>
+        <p><strong>Example:</strong> If JS is off, you'll see a warning message.</p>
+      </div>
+    </section>
+    
+    <!-- SECTION 2: Sectioning & Content Elements -->
+    <section id="sectioning" class="sectioning-element">
+      <h2>Sectioning & Content Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements help organize content into logical sections and provide structure to the document.</p>
+      </div>
+      
+      <div class="element-demo">
+        <!-- HEADER -->
+        <header>
+          <h1>My Website Header</h1>
+          <p>This is inside a &lt;header&gt; element.</p>
+        </header>
+
+        <!-- NAV -->
+        <nav>
+          <a href="#home">Home</a> | 
+          <a href="#about">About</a> | 
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- MAIN -->
+        <main>
+          <p>This is the <strong>&lt;main&gt;</strong> content of the page.</p>
+        </main>
+
+        <!-- SECTION -->
+        <section>
+          <h2>News Section</h2>
+          <p>Latest updates are shown here.</p>
+        </section>
+
+        <!-- ARTICLE -->
+        <article>
+          <h2>Article Title</h2>
+          <p>This is a blog post inside &lt;article&gt;.</p>
+        </article>
+
+        <!-- ASIDE -->
+        <aside>
+          <p>This is a sidebar note inside &lt;aside&gt;.</p>
+        </aside>
+
+        <!-- FOOTER -->
+        <footer>
+          <p>&copy; 2025 My Website</p>
+        </footer>
+      </div>
+    </section>
+    
+    <!-- SECTION 3: Text & Inline Elements -->
+    <section id="text" class="text-element">
+      <h2>Text & Inline Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements are used for formatting and structuring text content within HTML documents.</p>
+      </div>
+      
+      <div class="element-demo">
+        <!-- PARAGRAPH -->
+        <p>This is a paragraph using the &lt;p&gt; tag.</p>
+        
+        <!-- SPAN -->
+        <p>This <span style="color:red;">word is red</span> using &lt;span&gt;.</p>
+        
+        <!-- BOLD, ITALIC, EMPHASIS, STRONG -->
+        <p>This text has <b>bold</b>, <i>italic</i>, <em>emphasized</em>, and <strong>strong</strong> text.</p>
+        
+        <!-- MARK -->
+        <p>This text is <mark>highlighted</mark>.</p>
+        
+        <!-- ABBR -->
+        <p>Abbreviation: <abbr title="World Health Organization">WHO</abbr></p>
+        
+        <!-- SMALL -->
+        <p>Normal text <small>smaller note</small>.</p>
+        
+        <!-- SUP, SUB -->
+        <p>Mathematical expressions: x<sup>2</sup> + y<sup>2</sup> and H<sub>2</sub>O</p>
+        
+        <!-- DEL, INS -->
+        <p><del>Deleted text</del> and <ins>inserted text</ins></p>
+        
+        <!-- Q -->
+        <p>Quote: <q>This is a short quotation</q></p>
+        
+        <!-- BLOCKQUOTE -->
+        <blockquote>
+          This is a famous quote written inside &lt;blockquote&gt;.
+        </blockquote>
+        
+        <!-- CITE -->
+        <p>Citation: <cite>Hamlet</cite> by Shakespeare</p>
+        
+        <!-- DFN -->
+        <p>Definition: <dfn>HTML</dfn> is HyperText Markup Language.</p>
+        
+        <!-- KBD -->
+        <p>Keyboard input: Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
+        
+        <!-- SAMP -->
+        <p>Sample output: <samp>File not found</samp></p>
+        
+        <!-- VAR -->
+        <p>Variable: <var>x</var> + <var>y</var> = 10</p>
+        
+        <!-- TIME -->
+        <p>Meeting scheduled for <time datetime="2025-09-24T14:30">September 24, 2025 at 2:30 PM</time>.</p>
+        
+        <!-- CODE -->
+        <p>Code example: <code>&lt;html&gt;</code> element</p>
+        
+        <!-- PRE -->
+        <pre>
+This is preformatted text
+    with preserved spacing
+        and line breaks</pre>
+        
+        <!-- BR -->
+        <p>Line breaks:<br>This text is on<br>multiple lines</p>
+        
+        <!-- WBR -->
+        <p>A longwordthatmight<wbr>breakhere.</p>
+        
+        <!-- HR -->
+        <hr>
+        <p>Thematic break above</p>
+      </div>
+    </section>
+    
+    <!-- SECTION 4: Lists & Table Elements -->
+    <section id="lists-tables" class="list-table-element">
+      <h2>Lists & Table Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements are used for creating lists and tabular data structures.</p>
+      </div>
+      
+      <div class="element-demo">
+        <!-- UL -->
+        <h3>Unordered List:</h3>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Mango</li>
+        </ul>
+        
+        <!-- OL -->
+        <h3>Ordered List:</h3>
+        <ol>
+          <li>Wake up</li>
+          <li>Brush teeth</li>
+          <li>Go to work</li>
+        </ol>
+        
+        <!-- DL, DT, DD -->
+        <h3>Description List:</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>HyperText Markup Language</dd>
+          <dt>CSS</dt>
+          <dd>Cascading Style Sheets</dd>
+        </dl>
+        
+        <!-- TABLE -->
+        <h3>Table:</h3>
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+          <caption>Student Information</caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sara</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td>Ali</td>
+              <td>85</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">End of Table</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+    
+    <!-- SECTION 5: Forms & Input Elements -->
+    <section id="forms" class="form-element">
+      <h2>Forms & Input Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements are used to create interactive forms for collecting user input.</p>
+      </div>
+      
+      <div class="element-demo">
+        <form>
+          <fieldset>
+            <legend>Personal Information</legend>
+            
+            <!-- LABEL, INPUT -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120"><br><br>
+            
+            <!-- RADIO -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+            
+            <!-- CHECKBOX -->
+            <label>Interests:</label>
+            <input type="checkbox" id="tech" name="interests" value="tech">
+            <label for="tech">Technology</label>
+            <input type="checkbox" id="sports" name="interests" value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="music" name="interests" value="music">
+            <label for="music">Music</label><br><br>
+            
+            <!-- SELECT, OPTION, OPTGROUP -->
+            <label for="cars">Choose a car:</label>
+            <select id="cars">
+              <optgroup label="German Cars">
+                <option>BMW</option>
+                <option>Audi</option>
+              </optgroup>
+              <optgroup label="Japanese Cars">
+                <option>Toyota</option>
+                <option>Honda</option>
+              </optgroup>
+            </select><br><br>
+            
+            <!-- TEXTAREA -->
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter your message"></textarea><br><br>
+            
+            <!-- FILE INPUT -->
+            <label for="file">Upload file:</label>
+            <input type="file" id="file" name="file"><br><br>
+            
+            <!-- COLOR, DATE, RANGE -->
+            <label for="color">Favorite color:</label>
+            <input type="color" id="color" name="color"><br><br>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+            
+            <label for="range">Satisfaction level:</label>
+            <input type="range" id="range" name="range" min="1" max="10"><br><br>
+            
+            <!-- DATALIST -->
+            <label for="browser">Choose your browser:</label>
+            <input list="browsers" id="browser" name="browser">
+            <datalist id="browsers">
+              <option value="Chrome">
+              <option value="Firefox">
+              <option value="Safari">
+              <option value="Edge">
+            </datalist><br><br>
+            
+            <!-- PROGRESS, METER -->
+            <label for="progress">Progress:</label>
+            <progress id="progress" value="70" max="100"></progress><br><br>
+            
+            <label for="meter">Meter:</label>
+            <meter id="meter" value="0.7">70%</meter><br><br>
+            
+            <!-- OUTPUT -->
+            <label>Calculation:</label>
+            <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+              <input type="number" id="a" value="5"> +
+              <input type="number" id="b" value="10"> =
+              <output name="result">15</output>
+            </form><br><br>
+            
+            <!-- BUTTON -->
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    
+    <!-- SECTION 6: Media Elements -->
+    <section id="media" class="media-element">
+      <h2>Media Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements are used for embedding multimedia content such as images, audio, and video.</p>
+      </div>
+      
+      <div class="element-demo">
+        <!-- IMG -->
+        <h3>Image:</h3>
+        <figure>
+          <img src="https://via.placeholder.com/150" alt="Sample Image">
+          <figcaption>Sample image using &lt;img&gt; tag</figcaption>
+        </figure>
+        
+        <!-- AUDIO -->
+        <h3>Audio (placeholder - would need actual audio file):</h3>
+        <p>Audio element would appear here with controls</p>
+        
+        <!-- VIDEO -->
+        <h3>Video (placeholder - would need actual video file):</h3>
+        <p>Video element would appear here with controls</p>
+        
+        <!-- FIGURE, FIGCAPTION -->
+        <h3>Figure with Caption:</h3>
+        <figure>
+          <img src="https://via.placeholder.com/150" alt="Sample">
+          <figcaption>This is a figure with caption.</figcaption>
+        </figure>
+        
+        <!-- IFRAME -->
+        <h3>Inline Frame:</h3>
+        <iframe src="https://www.example.com" width="300" height="200" title="Iframe Example"></iframe>
+        
+        <!-- CANVAS -->
+        <h3>Canvas:</h3>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid black;"></canvas>
+        
+        <!-- SVG -->
+        <h3>SVG:</h3>
+        <svg width="100" height="100">
+          <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+        
+        <!-- EMBED -->
+        <h3>Embed (placeholder - would need actual file):</h3>
+        <p>Embedded content would appear here</p>
+        
+        <!-- OBJECT, PARAM -->
+        <h3>Object (placeholder - would need actual file):</h3>
+        <p>Object content would appear here</p>
+        
+        <!-- TRACK -->
+        <h3>Track (placeholder - would need actual video file):</h3>
+        <p>Track element for subtitles would appear here</p>
+      </div>
+    </section>
+    
+    <!-- SECTION 7: Interactive & Semantic Elements -->
+    <section id="semantic" class="semantic-element">
+      <h2>Interactive & Semantic Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements provide additional meaning to content and create interactive components.</p>
+      </div>
+      
+      <div class="element-demo">
+        <!-- DETAILS, SUMMARY -->
+        <details>
+          <summary>Click to expand this details element</summary>
+          <p>This content is hidden by default and revealed when the summary is clicked.</p>
+        </details>
+        
+        <!-- DIALOG -->
+        <dialog open>
+          <p>This is an open dialog box.</p>
+        </dialog>
+        
+        <!-- TIME -->
+        <p>Meeting scheduled for <time datetime="2025-09-24T14:30">September 24, 2025 at 2:30 PM</time>.</p>
+        
+        <!-- ADDRESS -->
+        <p>Contact information:</p>
+        <address>
+          Written by <a href="mailto:john@example.com">John Doe</a><br>
+          Visit us at:<br>
+          Example.com<br>
+          Box 564, Disneyland
+        </address>
+        
+        <!-- CITE -->
+        <p>Citation: <cite>The Great Gatsby</cite> by F. Scott Fitzgerald</p>
+        
+        <!-- CODE -->
+        <p>Code example: <code>console.log("Hello");</code></p>
+        
+        <!-- PRE -->
+        <pre>
+Line 1
+    Indented Line 2
+Line 3
+        </pre>
+        
+        <!-- KBD -->
+        <p>Keyboard input: Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.</p>
+        
+        <!-- SAMP -->
+        <p>Sample output: <samp>Error: File not found</samp></p>
+        
+        <!-- VAR -->
+        <p>Variable: <var>x</var> + <var>y</var> = 10</p>
+        
+        <!-- SMALL -->
+        <p><small>Terms and conditions apply</small></p>
+        
+        <!-- SUB, SUP -->
+        <p>Subscript and superscript: H<sub>2</sub>O and x<sup>2</sup></p>
+        
+        <!-- DEL, INS -->
+        <p>My favorite color is <del>blue</del> <ins>green</ins>.</p>
+        
+        <!-- Q -->
+        <p>He said, <q>Hello there!</q></p>
+        
+        <!-- BLOCKQUOTE -->
+        <blockquote cite="https://example.com">
+          "The journey of a thousand miles begins with a single step."
+        </blockquote>
+        
+        <!-- BDO -->
+        <p><bdo dir="rtl">This text is right-to-left</bdo></p>
+      </div>
+    </section>
+    
+    <!-- SECTION 8: Metadata & Scripting Elements -->
+    <section id="metadata" class="metadata-element">
+      <h2>Metadata & Scripting Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements provide metadata about the document and enable scripting functionality.</p>
+      </div>
+      
+      <div class="element-example">
+        <code>&lt;meta charset="UTF-8"&gt;</code>
+        <p>Specifies the character encoding for the document</p>
+      </div>
+      
+      <div class="element-example">
+        <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+        <p>Controls the viewport for responsive design</p>
+      </div>
+      
+      <div class="element-example">
+        <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>
+        <p>Links external CSS stylesheets to the document</p>
+      </div>
+      
+      <div class="element-example">
+        <code>&lt;base href="https://example.com/"&gt;</code>
+        <p>Specifies the base URL for all relative URLs in the document</p>
+      </div>
+      
+      <div class="element-example">
+        <code>&lt;style&gt;body { color: black; }&lt;/style&gt;</code>
+        <p>Contains internal CSS styles</p>
+      </div>
+      
+      <div class="element-example">
+        <code>&lt;script&gt;console.log('Hello');&lt;/script&gt;</code>
+        <p>Contains or links to JavaScript code</p>
+      </div>
+      
+      <div class="element-example">
+        <code>&lt;noscript&gt;JavaScript is disabled&lt;/noscript&gt;</code>
+        <p>Content shown when JavaScript is disabled</p>
+      </div>
+      
+      <div class="element-example">
+        <code>&lt;template&gt;&lt;div&gt;Template content&lt;/div&gt;&lt;/template&gt;</code>
+        <p>Contains template content that can be cloned via JavaScript</p>
+      </div>
+    </section>
+    
+    <!-- SECTION 9: Obsolete / Deprecated Elements -->
+    <section id="deprecated" class="deprecated-element">
+      <h2>Obsolete / Deprecated Elements</h2>
+      
+      <div class="element-description">
+        <p>These elements are no longer recommended for use in modern HTML and have been replaced by CSS or other elements.</p>
+      </div>
+      
+      <div class="element-demo">
+        <p><strong>Warning:</strong> These elements are deprecated and should not be used in new projects.</p>
+        
+        <!-- CENTER -->
+        <center>This text is centered (Deprecated)</center>
+        
+        <!-- FONT -->
+        <font color="red" size="5" face="Arial">Old styled text (Deprecated)</font>
+        
+        <!-- BIG, SMALL -->
+        <big>This is big text (Deprecated)</big><br>
+        <small>This is small text (Still valid)</small>
+        
+        <!-- STRIKE, U -->
+        <strike>Striked text (Deprecated)</strike><br>
+        <u>Underlined text (Deprecated)</u>
+        
+        <!-- MARQUEE -->
+        <marquee behavior="scroll" direction="left">This is a scrolling text (Deprecated)</marquee>
+        
+        <!-- APPLET -->
+        <applet code="MyApplet.class" width="300" height="200">
+          Your browser does not support applets (Deprecated).
+        </applet>
+        
+        <!-- ACRONYM -->
+        <acronym title="World Wide Web">WWW (Deprecated)</acronym>
+        
+        <!-- TT -->
+        <tt>This is teletype text (Deprecated)</tt>
+        
+        <!-- FRAMESET, FRAME, NOFRAMES -->
+        <frameset cols="50%,50%">
+          <frame src="https://example.com">
+          <frame src="https://www.wikipedia.org">
+          <noframes>Your browser does not support frames (Deprecated).</noframes>
+        </frameset>
+      </div>
+      
+      <div class="element-description">
+        <p><strong>Note:</strong> Most deprecated elements have been replaced by CSS for styling purposes.</p>
+      </div>
+    </section>
+    
+    <!-- SECTION 10: HTML Compiler -->
+<section id="compiler" class="form-element">
+  <h2>HTML Compiler - Practice Your HTML Skills</h2>
+  
+  <div class="element-description">
+    <p>Use this HTML compiler to practice writing HTML code. Type your HTML code in the editor on the left and see the live preview on the right.</p>
+  </div>
+  
+  <div class="compiler-container">
+    <!-- Code Editor Panel -->
+    <div class="compiler-panel">
+      <div class="compiler-header">
+        <span>HTML Code Editor</span>
+        <div class="compiler-buttons">
+          <button class="compiler-btn" onclick="runCode()">Run Code</button>
+          <button class="compiler-btn reset" onclick="resetCode()">Reset</button>
+        </div>
+      </div>
+      <div class="compiler-body autocomplete-container">
+        <textarea id="htmlCode" placeholder="Enter your HTML code here...">
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Practice Page</title>
+</head>
+<body>
+  <h1>Hello World!</h1>
+  <p>This is my first HTML practice.</p>
+  <button>Click Me</button>
+</body>
+</html></textarea>
+        <div class="autocomplete-suggestions" id="autocomplete-suggestions"></div>
+      </div>
+    </div>
+    
+    <!-- Preview Panel -->
+    <div class="compiler-panel">
+      <div class="compiler-header">
+        <span>Live Preview</span>
+      </div>
+      <div class="compiler-body">
+        <iframe id="preview"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+    
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+  </div>
+
+  
+</body>
+</html>
